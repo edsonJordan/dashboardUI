@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="resource/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resource/css/datatable.css">
+    
+    <!--Regular Datatables CSS-->
+    <!--Responsive Extension Datatables CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
+    
+    <!--Responsive Extension Datatables CSS-->
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">	
+    <title>Document</title>
+</head>
+<body>
+    <header class="h-16 p-4 bg-primary-400 flex flex-row items-center justify-between lg:p-6 xl:p-8 xl:h-20">
+        <div class="content-left flex flex-row gap-16">
+            <a href="#" class="flex flex-row items-center gap-4 text--bigText text-white" >
+                <svg   class="fill-white h-6 w-6 xl:h-8 xl:w-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.7283 22.313C23.9101 22.5064 24.0077 22.7642 23.9995 23.0296C23.9914 23.295 23.8782 23.5463 23.6848 23.7282C23.4915 23.9101 23.2339 24.0077 22.9686 23.9995C22.7033 23.9914 22.4522 23.8781 22.2704 23.6847L16.7875 17.8427C15.7516 17.8757 10.9807 18.0178 12.4756 15.7617C12.6008 15.6344 12.7582 15.5435 12.931 15.4987C13.1037 15.4539 13.2854 15.457 13.4566 15.5075C14.5745 15.8545 15.7545 15.9535 16.9145 15.7977C17.115 15.772 17.3187 15.7949 17.5084 15.8646C17.6981 15.9342 17.8683 16.0485 18.0045 16.1979L23.7283 22.313ZM14.9996 13.9948C15.6562 13.9957 16.3065 13.867 16.9132 13.616C17.52 13.365 18.0713 12.9966 18.5355 12.532L23.7063 7.35743C23.7993 7.26453 23.8731 7.15423 23.9235 7.03281C23.9738 6.91139 23.9998 6.78124 23.9999 6.64978C24 6.51831 23.9742 6.38812 23.924 6.26663C23.8738 6.14514 23.8002 6.03473 23.7073 5.94171C23.6145 5.84869 23.5042 5.77487 23.3829 5.72448C23.2615 5.67408 23.1315 5.6481 23.0001 5.64801C22.8687 5.64791 22.7385 5.67371 22.6171 5.72394C22.4957 5.77416 22.3853 5.84782 22.2924 5.94071L17.1215 11.1153C16.6824 11.5509 16.1195 11.84 15.5098 11.9432C14.9001 12.0463 14.2735 11.9585 13.7156 11.6916L20.7064 4.69708C20.8019 4.60479 20.8781 4.49439 20.9305 4.37232C20.9829 4.25026 21.0105 4.11897 21.0117 3.98612C21.0128 3.85328 20.9875 3.72153 20.9372 3.59857C20.887 3.47562 20.8127 3.36391 20.7188 3.26997C20.6249 3.17603 20.5133 3.10174 20.3904 3.05143C20.2675 3.00112 20.1358 2.97581 20.003 2.97696C19.8703 2.97812 19.739 3.00572 19.617 3.05815C19.495 3.11059 19.3847 3.18681 19.2925 3.28237L12.2997 10.2769C12.033 9.71875 11.9451 9.09177 12.0482 8.48177C12.1514 7.87177 12.4403 7.30855 12.8756 6.86918L18.0495 1.69557C18.2316 1.50687 18.3324 1.25414 18.3302 0.991811C18.3279 0.729482 18.2227 0.478543 18.0373 0.293041C17.8519 0.107539 17.6011 0.00231739 17.3389 3.78217e-05C17.0767 -0.00224175 16.8241 0.0986036 16.6355 0.280854L11.4637 5.45446C10.6504 6.27089 10.1433 7.34279 10.0276 8.48962C9.91196 9.63645 10.1949 10.7881 10.8287 11.7506L0.292992 22.292C0.110839 22.4807 0.0100473 22.7334 0.0123256 22.9957C0.014604 23.258 0.11977 23.509 0.305173 23.6945C0.490576 23.88 0.741381 23.9852 1.00357 23.9875C1.26576 23.9898 1.51836 23.8889 1.70695 23.7067L12.2427 13.1654C13.0605 13.7063 14.0192 13.9947 14.9996 13.9948ZM5.45185 12.9593C6.28082 13.7406 7.0458 12.7031 7.60279 12.1478C7.83318 11.9148 8.00283 11.6287 8.09682 11.3147C8.1908 11.0006 8.20623 10.6683 8.14177 10.3469C7.52479 8.62406 9.03275 6.61305 7.78478 5.22735L3.32891 0.560995C3.05405 0.293804 2.70699 0.113003 2.3306 0.0409153C1.95421 -0.0311722 1.56495 0.00861025 1.2109 0.155351C0.856847 0.302091 0.553498 0.549364 0.338308 0.86664C0.123117 1.18391 0.00550741 1.5573 0 1.94069C0.236993 6.55702 1.93495 8.91221 5.45185 12.9593Z" />
+                </svg>
+                Restaurante    
+            </a>
+            <div class="icon-menu flex  lg:flex-row  lg:items-center">
+                <span id="btn-menu-desk" class="hidden  lg:flex cursor-pointer	">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Outline" class="fill-white h-6 w-6 lg:h-7 lg:w-7" viewBox="0 0 24 24">
+                        <rect y="11" width="24" height="2" rx="1"/><rect y="4" width="24" height="2" rx="1"/><rect y="18" width="24" height="2" rx="1"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="icon-user">
+            </div>
+            <div class="icon-menu">
+                <span id="btn-menu" class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Outline" class="fill-white" viewBox="0 0 24 24" width="24" height="24">
+                        <rect y="11" width="24" height="2" rx="1"/><rect y="4" width="24" height="2" rx="1"/><rect y="18" width="24" height="2" rx="1"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <nav id="navigation" class="navigation lg:hidden">
+            <ul class="h-full flex flex-col justify-around">
+                <li class="flex justify-center">
+                    <a class="flex items-center justify-center text--subTitulo text-white h-12 w-2/3 gap-x-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-white block"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 19.9925C13.7909 19.9925 12 21.7845 12 23.995V32H20V23.995C20 21.7845 18.2091 19.9925 16 19.9925Z" />
+                            <path d="M22.6667 23.995V32H28C30.2091 32 32 30.208 32 27.9975V15.8286C32.0003 15.1355 31.7311 14.4695 31.2493 13.9715L19.9187 1.71446C17.9194 -0.450018 14.5452 -0.582913 12.3821 1.41758C12.2793 1.51264 12.1803 1.61164 12.0854 1.71446L0.774688 13.9675C0.278313 14.4675 -0.000187405 15.1438 9.46143e-08 15.8486V27.9975C9.46143e-08 30.208 1.79087 32 4 32H9.33331V23.995C9.35825 20.357 12.2937 17.3862 15.8379 17.3006C19.5006 17.2122 22.6388 20.2336 22.6667 23.995Z"/>
+                            <path d="M16 19.9925C13.7909 19.9925 12 21.7845 12 23.995V32H20V23.995C20 21.7845 18.2091 19.9925 16 19.9925Z"/>
+                        </svg>                            
+                        <span>
+                            Inicio
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-center">
+                    <a class="flex items-center text--subTitulo justify-center  text-white h-12 w-2/3 gap-x-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-white block" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_76_35)">
+                            <path d="M32 29.3333C32 29.687 31.8595 30.0261 31.6095 30.2761C31.3594 30.5262 31.0203 30.6667 30.6667 30.6667H1.33333C0.979711 30.6667 0.640573 30.5262 0.390524 30.2761C0.140476 30.0261 0 29.687 0 29.3333C0 28.9797 0.140476 28.6406 0.390524 28.3905C0.640573 28.1405 0.979711 28 1.33333 28H30.6667C31.0203 28 31.3594 28.1405 31.6095 28.3905C31.8595 28.6406 32 28.9797 32 29.3333ZM2.66667 25.3333H29.3333C29.687 25.3333 30.0261 25.1929 30.2761 24.9428C30.5262 24.6928 30.6667 24.3536 30.6667 24V22.6667C30.6618 19.0098 29.2923 15.4863 26.8261 12.7862C24.36 10.086 20.9748 8.40346 17.3333 8.06799V6.29733C17.8417 6.00381 18.239 5.55075 18.4637 5.00841C18.6883 4.46607 18.7277 3.86476 18.5758 3.29774C18.4239 2.73072 18.0891 2.22967 17.6234 1.87232C17.1576 1.51496 16.587 1.32126 16 1.32126C15.413 1.32126 14.8424 1.51496 14.3766 1.87232C13.9109 2.22967 13.5761 2.73072 13.4242 3.29774C13.2723 3.86476 13.3117 4.46607 13.5363 5.00841C13.761 5.55075 14.1583 6.00381 14.6667 6.29733V8.06799C11.0252 8.40346 7.64002 10.086 5.17388 12.7862C2.70773 15.4863 1.33818 19.0098 1.33333 22.6667V24C1.33333 24.3536 1.47381 24.6928 1.72386 24.9428C1.97391 25.1929 2.31304 25.3333 2.66667 25.3333Z" />
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_76_35">
+                            <rect width="32" height="32" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                          
+                        <span>
+                            Pedido
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-center">
+                    <a class="flex items-center text--subTitulo justify-center  text-white h-12 w-2/3 gap-x-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-white block"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 19.9925C13.7909 19.9925 12 21.7845 12 23.995V32H20V23.995C20 21.7845 18.2091 19.9925 16 19.9925Z" />
+                            <path d="M22.6667 23.995V32H28C30.2091 32 32 30.208 32 27.9975V15.8286C32.0003 15.1355 31.7311 14.4695 31.2493 13.9715L19.9187 1.71446C17.9194 -0.450018 14.5452 -0.582913 12.3821 1.41758C12.2793 1.51264 12.1803 1.61164 12.0854 1.71446L0.774688 13.9675C0.278313 14.4675 -0.000187405 15.1438 9.46143e-08 15.8486V27.9975C9.46143e-08 30.208 1.79087 32 4 32H9.33331V23.995C9.35825 20.357 12.2937 17.3862 15.8379 17.3006C19.5006 17.2122 22.6388 20.2336 22.6667 23.995Z"/>
+                            <path d="M16 19.9925C13.7909 19.9925 12 21.7845 12 23.995V32H20V23.995C20 21.7845 18.2091 19.9925 16 19.9925Z"/>
+                        </svg> 
+                        <span>
+                            Estadisticas
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-center">
+                    <a class="flex items-center justify-center text--subTitulo text-white h-12 w-2/3 gap-x-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-white block"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 19.9925C13.7909 19.9925 12 21.7845 12 23.995V32H20V23.995C20 21.7845 18.2091 19.9925 16 19.9925Z" />
+                            <path d="M22.6667 23.995V32H28C30.2091 32 32 30.208 32 27.9975V15.8286C32.0003 15.1355 31.7311 14.4695 31.2493 13.9715L19.9187 1.71446C17.9194 -0.450018 14.5452 -0.582913 12.3821 1.41758C12.2793 1.51264 12.1803 1.61164 12.0854 1.71446L0.774688 13.9675C0.278313 14.4675 -0.000187405 15.1438 9.46143e-08 15.8486V27.9975C9.46143e-08 30.208 1.79087 32 4 32H9.33331V23.995C9.35825 20.357 12.2937 17.3862 15.8379 17.3006C19.5006 17.2122 22.6388 20.2336 22.6667 23.995Z"/>
+                            <path d="M16 19.9925C13.7909 19.9925 12 21.7845 12 23.995V32H20V23.995C20 21.7845 18.2091 19.9925 16 19.9925Z"/>
+                        </svg>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-panel" class="main-panel bg-primary-50  flex flex-row gap-2" >
+        <nav id="navigation-desktop" class="navigation-desk hidden lg:flex">
+            <ul class="h-fit flex gap-4 flex-col justify-around w-full">
+                <li class="flex justify-center items-center">
+                    <a class="flex items-center justify-start text--normalLarge text-gray-600 h-12 w-4/5 gap-x-4 p-4 " href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-gray-600 block"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30.828 12.0707L20.7147 1.95C19.463 0.70124 17.7675 0 16 0C14.2325 0 12.537 0.70124 11.2853 1.95L1.17201 12.0707C0.799249 12.4413 0.503709 12.8823 0.302526 13.368C0.101343 13.8538 -0.00148053 14.3746 1.6106e-05 14.9004V27.9976C1.6106e-05 29.0591 0.421443 30.0771 1.17159 30.8277C1.92173 31.5783 2.93915 32 4.00001 32H28C29.0609 32 30.0783 31.5783 30.8284 30.8277C31.5786 30.0771 32 29.0591 32 27.9976V14.9004C32.0015 14.3746 31.8987 13.8538 31.6975 13.368C31.4963 12.8823 31.2007 12.4413 30.828 12.0707ZM20 29.3317H12V24.0833C12 23.0218 12.4214 22.0037 13.1716 21.2531C13.9217 20.5025 14.9391 20.0809 16 20.0809C17.0609 20.0809 18.0783 20.5025 18.8284 21.2531C19.5786 22.0037 20 23.0218 20 24.0833V29.3317ZM29.3333 27.9976C29.3333 28.3514 29.1928 28.6908 28.9428 28.941C28.6927 29.1912 28.3536 29.3317 28 29.3317H22.6667V24.0833C22.6667 22.3141 21.9643 20.6174 20.714 19.3664C19.4638 18.1154 17.7681 17.4126 16 17.4126C14.2319 17.4126 12.5362 18.1154 11.286 19.3664C10.0357 20.6174 9.33334 22.3141 9.33334 24.0833V29.3317H4.00001C3.64639 29.3317 3.30725 29.1912 3.0572 28.941C2.80716 28.6908 2.66668 28.3514 2.66668 27.9976V14.9004C2.66792 14.5469 2.80827 14.208 3.05735 13.9572L13.1707 3.84047C13.9223 3.09193 14.9396 2.67169 16 2.67169C17.0604 2.67169 18.0777 3.09193 18.8293 3.84047L28.9427 13.9612C29.1908 14.211 29.331 14.5482 29.3333 14.9004V27.9976Z"/>
+                        </svg>                            
+                        <span>
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-center">
+                    <a class="flex items-center text--normalLarge justify-start  text-gray-600 h-12 w-4/5 gap-x-4 p-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-gray-600 block" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.6667 25.1996V22.5329C30.6618 18.876 29.2923 15.3526 26.8261 12.6524C24.36 9.95221 20.9748 8.2697 17.3333 7.93423V6.16357C17.8417 5.87006 18.239 5.417 18.4637 4.87466C18.6883 4.33232 18.7277 3.731 18.5758 3.16398C18.4239 2.59696 18.0891 2.09592 17.6234 1.73856C17.1576 1.3812 16.587 1.1875 16 1.1875C15.413 1.1875 14.8424 1.3812 14.3766 1.73856C13.9109 2.09592 13.5761 2.59696 13.4242 3.16398C13.2723 3.731 13.3117 4.33232 13.5363 4.87466C13.761 5.417 14.1583 5.87006 14.6667 6.16357V7.93423C11.0252 8.2697 7.64002 9.95221 5.17388 12.6524C2.70773 15.3526 1.33818 18.876 1.33333 22.5329V25.1996C0.979711 25.1996 0.640573 25.34 0.390524 25.5901C0.140476 25.8401 0 26.1793 0 26.5329C0 26.8865 0.140476 27.2257 0.390524 27.4757C0.640573 27.7258 0.979711 27.8662 1.33333 27.8662H30.6667C31.0203 27.8662 31.3594 27.7258 31.6095 27.4757C31.8595 27.2257 32 26.8865 32 26.5329C32 26.1793 31.8595 25.8401 31.6095 25.5901C31.3594 25.34 31.0203 25.1996 30.6667 25.1996ZM4 22.5329C4.63067 6.6209 27.3747 6.6329 28 22.5329V25.1996H4V22.5329Z" />
+                        </svg>                          
+                        <span>
+                            Pedido
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-center">
+                    <a class="flex items-center text--normalLarge justify-start  text-gray-600 h-12 w-4/5 gap-x-4 p-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-gray-600 block"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 32H8C3.5888 32 0 29.0093 0 25.3333V6.66667C0 2.99067 3.5888 0 8 0H24C28.4112 0 32 2.99067 32 6.66667V25.3333C32 29.0093 28.4112 32 24 32ZM8 2.66667C5.3536 2.66667 3.2 4.46133 3.2 6.66667V25.3333C3.2 27.5387 5.3536 29.3333 8 29.3333H24C26.6464 29.3333 28.8 27.5387 28.8 25.3333V6.66667C28.8 4.46133 26.6464 2.66667 24 2.66667H8ZM25.6 8C25.6 7.264 24.8832 6.66667 24 6.66667H17.6C16.7168 6.66667 16 7.264 16 8C16 8.736 16.7168 9.33333 17.6 9.33333H24C24.8832 9.33333 25.6 8.736 25.6 8ZM25.6 16C25.6 15.264 24.8832 14.6667 24 14.6667H17.6C16.7168 14.6667 16 15.264 16 16C16 16.736 16.7168 17.3333 17.6 17.3333H24C24.8832 17.3333 25.6 16.736 25.6 16ZM25.6 24C25.6 23.264 24.8832 22.6667 24 22.6667H17.6C16.7168 22.6667 16 23.264 16 24C16 24.736 16.7168 25.3333 17.6 25.3333H24C24.8832 25.3333 25.6 24.736 25.6 24ZM12.8 9.33333V6.66667C12.8 5.93067 12.0832 5.33333 11.2 5.33333H8C7.1168 5.33333 6.4 5.93067 6.4 6.66667V9.33333C6.4 10.0693 7.1168 10.6667 8 10.6667H11.2C12.0832 10.6667 12.8 10.0693 12.8 9.33333ZM12.8 17.3333V14.6667C12.8 13.9307 12.0832 13.3333 11.2 13.3333H8C7.1168 13.3333 6.4 13.9307 6.4 14.6667V17.3333C6.4 18.0693 7.1168 18.6667 8 18.6667H11.2C12.0832 18.6667 12.8 18.0693 12.8 17.3333ZM12.8 25.3333V22.6667C12.8 21.9307 12.0832 21.3333 11.2 21.3333H8C7.1168 21.3333 6.4 21.9307 6.4 22.6667V25.3333C6.4 26.0693 7.1168 26.6667 8 26.6667H11.2C12.0832 26.6667 12.8 26.0693 12.8 25.3333Z" />
+                        </svg> 
+                        <span>
+                            Historial
+                        </span>
+                    </a>
+                </li>
+                <li class="flex justify-center">
+                    <a class="flex items-center justify-start text--normalLarge text-gray-600 h-12 w-4/5 gap-x-4 p-4" href="#">
+                        <svg width="24" height="24" viewBox="0 0 32 32" class="fill-gray-600 block"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 21.3333C14.9452 21.3333 13.914 21.0205 13.037 20.4345C12.1599 19.8485 11.4763 19.0155 11.0726 18.041C10.669 17.0664 10.5634 15.9941 10.7691 14.9595C10.9749 13.925 11.4829 12.9746 12.2288 12.2288C12.9746 11.4829 13.925 10.9749 14.9595 10.7691C15.9941 10.5634 17.0664 10.669 18.041 11.0726C19.0155 11.4763 19.8485 12.1599 20.4345 13.037C21.0205 13.914 21.3333 14.9452 21.3333 16C21.3333 17.4145 20.7714 18.771 19.7712 19.7712C18.771 20.7714 17.4145 21.3333 16 21.3333ZM16 13.3333C15.4726 13.3333 14.957 13.4897 14.5185 13.7827C14.0799 14.0758 13.7382 14.4922 13.5363 14.9795C13.3345 15.4668 13.2817 16.003 13.3846 16.5202C13.4875 17.0375 13.7414 17.5127 14.1144 17.8856C14.4873 18.2586 14.9625 18.5125 15.4798 18.6154C15.997 18.7183 16.5332 18.6655 17.0205 18.4637C17.5078 18.2618 17.9242 17.9201 18.2173 17.4815C18.5103 17.043 18.6667 16.5274 18.6667 16C18.6667 15.2928 18.3857 14.6145 17.8856 14.1144C17.3855 13.6143 16.7072 13.3333 16 13.3333ZM24 30.6667C24 28.5449 23.1571 26.5101 21.6569 25.0098C20.1566 23.5095 18.1217 22.6667 16 22.6667C13.8783 22.6667 11.8434 23.5095 10.3431 25.0098C8.84286 26.5101 8 28.5449 8 30.6667C8 31.0203 8.14048 31.3594 8.39052 31.6095C8.64057 31.8595 8.97971 32 9.33333 32C9.68696 32 10.0261 31.8595 10.2761 31.6095C10.5262 31.3594 10.6667 31.0203 10.6667 30.6667C10.6667 29.2522 11.2286 27.8956 12.2288 26.8954C13.229 25.8952 14.5855 25.3333 16 25.3333C17.4145 25.3333 18.771 25.8952 19.7712 26.8954C20.7714 27.8956 21.3333 29.2522 21.3333 30.6667C21.3333 31.0203 21.4738 31.3594 21.7239 31.6095C21.9739 31.8595 22.313 32 22.6667 32C23.0203 32 23.3594 31.8595 23.6095 31.6095C23.8595 31.3594 24 31.0203 24 30.6667ZM24 10.6667C22.9452 10.6667 21.914 10.3539 21.037 9.76784C20.1599 9.18181 19.4763 8.34885 19.0726 7.37431C18.669 6.39977 18.5634 5.32742 18.7691 4.29285C18.9749 3.25829 19.4829 2.30798 20.2288 1.5621C20.9746 0.816219 21.925 0.308269 22.9595 0.102481C23.9941 -0.103307 25.0664 0.00231083 26.041 0.405978C27.0155 0.809645 27.8485 1.49323 28.4345 2.37029C29.0205 3.24736 29.3333 4.2785 29.3333 5.33334C29.3333 6.74782 28.7714 8.10438 27.7712 9.10457C26.771 10.1048 25.4145 10.6667 24 10.6667ZM24 2.66667C23.4726 2.66667 22.957 2.82307 22.5185 3.11608C22.0799 3.4091 21.7382 3.82558 21.5363 4.31285C21.3345 4.80012 21.2817 5.33629 21.3846 5.85358C21.4875 6.37086 21.7414 6.84601 22.1144 7.21895C22.4873 7.59189 22.9625 7.84587 23.4798 7.94876C23.997 8.05166 24.5332 7.99885 25.0205 7.79701C25.5078 7.59518 25.9242 7.25339 26.2173 6.81486C26.5103 6.37632 26.6667 5.86075 26.6667 5.33334C26.6667 4.62609 26.3857 3.94781 25.8856 3.44772C25.3855 2.94762 24.7072 2.66667 24 2.66667ZM32 20C31.9979 17.8789 31.1543 15.8453 29.6545 14.3455C28.1547 12.8457 26.1211 12.0021 24 12C23.6464 12 23.3072 12.1405 23.0572 12.3905C22.8071 12.6406 22.6667 12.9797 22.6667 13.3333C22.6667 13.687 22.8071 14.0261 23.0572 14.2761C23.3072 14.5262 23.6464 14.6667 24 14.6667C25.4145 14.6667 26.771 15.2286 27.7712 16.2288C28.7714 17.229 29.3333 18.5855 29.3333 20C29.3333 20.3536 29.4738 20.6928 29.7239 20.9428C29.9739 21.1929 30.313 21.3333 30.6667 21.3333C31.0203 21.3333 31.3594 21.1929 31.6095 20.9428C31.8595 20.6928 32 20.3536 32 20ZM8 10.6667C6.94517 10.6667 5.91402 10.3539 5.03696 9.76784C4.1599 9.18181 3.47631 8.34885 3.07264 7.37431C2.66898 6.39977 2.56336 5.32742 2.76915 4.29285C2.97493 3.25829 3.48288 2.30798 4.22876 1.5621C4.97464 0.816219 5.92495 0.308269 6.95952 0.102481C7.99408 -0.103307 9.06644 0.00231083 10.041 0.405978C11.0155 0.809645 11.8485 1.49323 12.4345 2.37029C13.0205 3.24736 13.3333 4.2785 13.3333 5.33334C13.3333 6.74782 12.7714 8.10438 11.7712 9.10457C10.771 10.1048 9.41449 10.6667 8 10.6667ZM8 2.66667C7.47258 2.66667 6.95701 2.82307 6.51848 3.11608C6.07995 3.4091 5.73815 3.82558 5.53632 4.31285C5.33449 4.80012 5.28168 5.33629 5.38457 5.85358C5.48747 6.37086 5.74144 6.84601 6.11438 7.21895C6.48732 7.59189 6.96248 7.84587 7.47976 7.94876C7.99704 8.05166 8.53322 7.99885 9.02049 7.79701C9.50776 7.59518 9.92424 7.25339 10.2173 6.81486C10.5103 6.37632 10.6667 5.86075 10.6667 5.33334C10.6667 4.62609 10.3857 3.94781 9.88562 3.44772C9.38552 2.94762 8.70724 2.66667 8 2.66667ZM2.66667 20C2.66667 18.5855 3.22857 17.229 4.22876 16.2288C5.22896 15.2286 6.58551 14.6667 8 14.6667C8.35362 14.6667 8.69276 14.5262 8.94281 14.2761C9.19286 14.0261 9.33333 13.687 9.33333 13.3333C9.33333 12.9797 9.19286 12.6406 8.94281 12.3905C8.69276 12.1405 8.35362 12 8 12C5.87892 12.0021 3.84532 12.8457 2.34548 14.3455C0.845653 15.8453 0.00211791 17.8789 0 20C0 20.3536 0.140476 20.6928 0.390524 20.9428C0.640573 21.1929 0.979711 21.3333 1.33333 21.3333C1.68696 21.3333 2.02609 21.1929 2.27614 20.9428C2.52619 20.6928 2.66667 20.3536 2.66667 20Z" />
+                        </svg>
+                        <span>Soporte</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="wraper" class="content-wraper  flex flex-col py-4 w-full md:p-6 xl:gap-2  ">            
+            <!-- Row header -->
+            <div class="flex columns-2 flex-col lg:flex-row justify-between">
+                <div class="flex flex-col w-full px-4 py-4 gap-2">
+                    <h3 class="text-gray_solid-400 text--titulo" >Welcome Aamir</h3>
+                    <p class="text--normalLectura text-gray_solid-300	">
+                        All systems are running smoothly! You have 3 unread alerts!
+                    </p>
+                </div>
+                <div class="flex w-full px-4 py-4 justify-end ">
+                    Esto es un botton
+                </div>
+            </div>
+            <!-- First row -->
+            <div class="flex flex-col md:flex-row w-full xl:gap-4">
+                <div class="card px-4 py-4 md:w-6/12 md:px-3 md:py-4 md:h-auto ">
+                    <img class=" rounded-2xl overflow-hidden  object-cover md:h-full lg:w-full" src="resource/svg/illustration.svg " alt="">
+                </div>
+                <div class="grid grid-rows-1 gap-6 px-4 py-4 md:w-6/12 md:grid-cols-2 md:grid-rows-2  2xl:grid-rows-max ">
+                    <div class="card   bg-primary-400 rounded-2xl  px-4 py-8 h-fit">
+                        <div class="card-body">
+                            <p class="mb-4 text--normal text-white">Today’s Bookings</p>
+                            <p class="text--bigText text-white">4006</p>
+                            <p class="text--normal text-white">10.00% (30 days)</p>
+                        </div>
+                    </div>
+                    <div class="card   bg-primary-500 rounded-2xl  px-4 py-8 h-fit">
+                        <div class="card-body">
+                            <p class="mb-4 text--normal text-white">Today’s Bookings</p>
+                            <p class="text--bigText text-white">4006</p>
+                            <p class="text--normal text-white">10.00% (30 days)</p>
+                        </div>
+                    </div>
+                    <div class="card   bg-primary-600 rounded-2xl  px-4 py-8 h-fit">
+                        <div class="card-body">
+                            <p class="mb-4 text--normal text-white">Today’s Bookings</p>
+                            <p class="text--bigText text-white">4006</p>
+                            <p class="text--normal text-white">10.00% (30 days)</p>
+                        </div>
+                    </div>                    
+                    <div class="card   bg-primary-700 rounded-2xl  px-4 py-8 h-fit">
+                        <div class="card-body">
+                            <p class="mb-4 text--normal text-white">Today’s Bookings</p>
+                            <p class="text--bigText text-white">4006</p>
+                            <p class="text--normal text-white">10.00% (30 days)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second row -->
+            <div class="flex flex-col  md:flex-row w-full xl:gap-4">
+                <div class="card px-4 py-4 md:w-6/12 md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  px-7 py-7 flex flex-col ">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >Order Details</h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 mb-8">
+                            <p class=" text--normalLectura text-gray-700">The total number of sessions within the date range.
+                                 It is the period time a user is actively engaged with your website, page or app, etc</p>
+                                <div class="grid-block grid grid-cols-2 gap-4 xl:grid-cols-4 xl:grid-rows-1">
+                                    <div class=" flex flex-col gap-2 xl:items-start">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Order Value
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500 text-center">
+                                            12.3k
+                                        </p>
+                                    </div>   
+                                    <div class=" flex flex-col gap-2 xl:items-start">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Orders
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500 text-center">
+                                            12.3k
+                                        </p>
+                                    </div>  
+                                    <div class=" flex flex-col gap-2 text-center xl:items-start">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Users
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500">
+                                            71.56%
+                                        </p>
+                                    </div>   
+                                    <div class=" flex flex-col gap-2 xl:items-start">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Order Value
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500 text-center">
+                                            34040
+                                        </p>
+                                    </div>                                   
+                                </div>
+                        </div>
+                        <div class="card-footer">                            
+                            <canvas id="myChart" class=""  height="40vh" width="80vw"></canvas>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="card px-4 py-4 md:w-6/12 md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col ">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >Order Details</h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 mb-8">
+                            <p class=" text--normalLectura text-gray-700">The total number of sessions within the date range.
+                                 It is the period time a user is actively engaged with your website, page or app, etc</p>
+                                <div class="grid-block grid grid-cols-2 gap-4 xl:grid-cols-4 xl:grid-rows-1">
+                                    <div class=" flex flex-col gap-2">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Order Value
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500 text-center">
+                                            12.3k
+                                        </p>
+                                    </div>   
+                                    <div class=" flex flex-col gap-2">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Order Value
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500 text-center">
+                                            12.3k
+                                        </p>
+                                    </div>  
+                                    <div class=" flex flex-col gap-2 text-center">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Order Value
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500">
+                                            12.3k
+                                        </p>
+                                    </div>   
+                                    <div class=" flex flex-col gap-2">
+                                        <h4 class="h4 h4--grid-card text--normalLarge text-gray-600 text-center">
+                                            Order Value
+                                        </h4>
+                                        <p class="text--bigSize text-primary-500 text-center">
+                                            12.3k
+                                        </p>
+                                    </div>                                   
+                                </div>
+                        </div>
+                        <div class="card-footer">                            
+                            <canvas id="barchart" class=""  height="40vh" width="80vw"></canvas>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- Third row -->
+            <div class="flex flex-col  md:flex-row  w-full xl:gap-4">
+                <div class="content-sliders flex flex-col bg-white m-3 rounded-2xl md:w-full ">
+                    <div class="card  md:px-3 md:py-4 md:h-auto md:w-full  ">
+                        <div class="card rounded-2xl  px-4 py-8 flex flex-col bg-white xl:flex-row ">
+                            <div class="card-header mb-4 flex flex-col gap-2 xl:w-1/4">
+                                <h3 class="text-gray_solid-300 text--titulo" >Detailed Reports</h3>
+                                <p class="text--biggest text-primary-500" >$34040</p>
+                                <p class="text--bigSize text-primary-500 ">
+                                    Nort America
+                                </p>
+                                <span class=" text--normalLectura text-gray-700">
+                                    The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc
+                                </span>
+                            </div>
+                            <div class="card-body flex gap-4  flex-col md:flex-row xl:w-3/4">
+                                <div class="progress flex flex-col px-2 md:w-2/4 md:min-h-full ">
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4  ">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">Illinois</p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 47%"> 47%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">600</p> 
+                                    </div>
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">Washington</p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-300 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%"> 85%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">580</p> 
+                                    </div>
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">Mississippi</p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 25%"> 25%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">350</p> 
+                                    </div>
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">California</p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 100%"> 100%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">985</p> 
+                                    </div>
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">Maryland </p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-100 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 95%"> 95%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">714</p> 
+                                    </div>
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">Maryland </p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-100 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 95%"> 95%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">714</p> 
+                                    </div>
+                                    <div class="box-progress w-full flex flex-row justify-between gap-6 items-center p-4">
+                                        <p class="p text--normalLectura text-gray-700 min-w-1/5">Maryland </p>                                       
+                                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 min-w-1/5">
+                                            <div class="bg-primary-100 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 95%"> 95%</div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">714</p> 
+                                    </div>
+                                    
+                                </div>
+                                <div class="progress flex flex-col px-2 md:w-2/4 lg:px-6 lg:pb-6 ">
+                                   <div class=" mx-auto px-4 w-4/5 xl:px-8 2xl:px-16 ">
+                                    <canvas id="donutchart" style="position: relative; height:40vh; width:80vw" ></canvas>
+                                   </div>
+                                    <div class="progress flex flex-col p-4 gap-4 ">
+                                        
+                                        <div class="box-progress w-full flex flex-row gap-8 items-center  justify-between">
+                                            <div class="flex flex-row gap-2">
+                                                <div class="roundend w-4 h-4 bg-primary-500 rounded-full"></div>                                     
+                                                <p class="p text--normalLectura text-gray-700 min-w-1/5">Mississippi</p>                                       
+                                            </div> 
+                                            
+                                            <p class="p text--normalLectura text-gray_solid-200">350</p> 
+                                        </div>
+                                        <div class="box-progress w-full flex flex-row gap-8 items-center  justify-between">
+                                            <div class="flex flex-row gap-2">
+                                                <div class="roundend w-4 h-4 bg-primary-700 rounded-full"></div>                                     
+                                                <p class="p text--normalLectura text-gray-700 min-w-1/5">California</p>                                       
+                                            </div> 
+                                            
+                                            <p class="p text--normalLectura text-gray_solid-200">985</p> 
+                                        </div>
+                                        <div class="box-progress w-full flex flex-row gap-8 items-center  justify-between">
+                                            <div class="flex flex-row gap-2">
+                                                <div class="roundend w-4 h-4 bg-primary-400 rounded-full"></div>                                    
+                                                <p class="p text--normalLectura text-gray-700 min-w-1/5">Maryland </p>                                       
+                                            </div> 
+                                            
+                                            <p class="p text--normalLectura text-gray_solid-200">714</p> 
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div> 
+                    </div>                
+                 
+                </div>
+                
+            </div>
+            <!-- Fourth row -->
+            <div class="flex flex-col  md:flex-row w-full xl:gap-4">
+                <div class="card px-4 py-4 md:w-7/12 md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col ">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >Order Details</h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 mb-8 overflow-scroll xl:overflow-auto">
+                            <table class="w-full text-sm text-left text-gray-400">
+                                <thead class="text-xs uppercase  text-gray-700 text--normalBold">
+                                    <tr>
+                                        <th scope="col" class="py-3 px-6">
+                                            Product name
+                                        </th>
+                                        <th scope="col" class="py-3 px-6">
+                                            Color
+                                        </th>
+                                        <th scope="col" class="py-3 px-6">
+                                            Category
+                                        </th>
+                                        <th scope="col" class="py-3 px-6">
+                                            Price
+                                        </th>
+                                        <th scope="col" class="py-3 px-6">
+                                            Status
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-gray-50 border-b text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap text-gray-700">
+                                            Apple MacBook Pro 17"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $2999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal 	border-status-success rounded-2xl bg-white text-status-success" >Completed</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white  text-gray_solid-100 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $1999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal	border-status-pre_danger rounded-2xl bg-white text-status-pre_danger" >Pending</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50 border-b text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap text-gray-700">
+                                            Apple MacBook Pro 17"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $2999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal	border-status-error rounded-2xl bg-white text-status-error" >Cancelled</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white  text-gray_solid-100 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $1999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal	border-status-pre_danger rounded-2xl bg-white text-status-pre_danger " >Pending</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50 border-b text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap text-gray-700">
+                                            Apple MacBook Pro 17"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $2999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal 	border-status-success rounded-2xl bg-white text-status-success" >Completed</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white  text-gray_solid-100 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $1999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal 	border-status-success rounded-2xl bg-white text-status-success" >Completed</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50  text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium  whitespace-nowrap ">
+                                            Apple MacBook Pro 18"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $2999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal	border-status-pre_danger rounded-2xl bg-white text-status-pre_danger " >Pending</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white  text-gray_solid-100 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            $1999
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            <label for="" class="px-4 py-2 border-x border-y  border-solid text--normal	border-status-pre_danger rounded-2xl bg-white text-status-pre_danger " >Pending</label>
+                                        </td>
+                                    </tr>
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>                
+                <div class="card px-4 py-4 md:w-5/12 md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col grow">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >To Do Lists </h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 mb-8">
+                            <ul class="todo-list flex flex-col gap-2 w-full py-4 ul__todo-list" id="lisTasks">
+                                <!-- <li class="list__todo-list">
+                                    <form action="" class="form__todo-list">
+                                        <input type="checkbox" name="" id="check1" >
+                                        <label for="check1" class="cursor-pointer">
+                                            Lavar la ropa
+                                        </label>
+                                    </form>
+                                    <a att-dele="qweqwqw" class="deleted label__todo-list z-50 	">
+                                        
+                                    </a>  -->
+                                    <!-- <form action="submit" class="deleted label__todo-list">
+                                        <label for="idDelete" class="label__todo-list">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" class="svg__todo-list" viewBox="-4 -4 24 24">
+                                                <path d="M9.41416 8.00023L15.7072 1.70783C16.0979 1.31719 16.0979 0.683841 15.7072 0.293232C15.3166 -0.0974083 14.6833 -0.0974083 14.2927 0.293232L8.00022 6.58629L1.70782 0.293232C1.31718 -0.0974083 0.683833 -0.0974083 0.293224 0.293232C-0.0973847 0.683872 -0.0974159 1.31722 0.293224 1.70783L6.58628 8.00023L0.293224 14.2927C-0.0974159 14.6833 -0.0974159 15.3166 0.293224 15.7073C0.683865 16.0979 1.31721 16.0979 1.70782 15.7073L8.00022 9.41417L14.2926 15.7073C14.6833 16.0979 15.3166 16.0979 15.7072 15.7073C16.0979 15.3166 16.0979 14.6833 15.7072 14.2927L9.41416 8.00023Z" />
+                                            </svg>
+                                        </label>                                         
+                                        <input  type="submit" id="idDelete" class="hidden" value="">
+                                    </form> -->                                                                                                           
+                                <!-- </li> -->
+                            </ul>
+                        </div>
+                        <div class="card-footer">   
+                            <form id="taskForm" action="" method="post">
+                                <label class="relative flex  flex-column-reverse">
+                                    <span class="sr-only">Search</span>                                    
+                                    <input required class=" placeholder:text-gray-700 placeholder:font-secondary-light  w-full text-gray_solid-300 tracking-small font-secondary-light text-normal leading-extra_large  bg-gray-100 rounded-md py-4 pl-9 pr-3 shadow-sm focus:outline-none  focus:bg-gray-50 focus:text-gray-700 " placeholder="Add new task..." type="text" name="search"/>                                    
+                                    <label for="send"   class=" cursor-pointer relative  inset-y-0 left-0 flex items-center -ml-10 ">
+                                        <svg class="h-6 w-6 fill-status-progress border border-x-2 border-y-2  border-solid rounded-full	border-status-progress" viewBox="4 4 24 24">
+                                          <path d="M22.6667 14.6667H17.3333V9.33333C17.3333 8.97971 17.1929 8.64057 16.9428 8.39052C16.6928 8.14048 16.3536 8 16 8C15.6464 8 15.3072 8.14048 15.0572 8.39052C14.8071 8.64057 14.6667 8.97971 14.6667 9.33333V14.6667H9.33333C8.97971 14.6667 8.64057 14.8071 8.39052 15.0572C8.14048 15.3072 8 15.6464 8 16C8 16.3536 8.14048 16.6928 8.39052 16.9428C8.64057 17.1929 8.97971 17.3333 9.33333 17.3333H14.6667V22.6667C14.6667 23.0203 14.8071 23.3594 15.0572 23.6095C15.3072 23.8595 15.6464 24 16 24C16.3536 24 16.6928 23.8595 16.9428 23.6095C17.1929 23.3594 17.3333 23.0203 17.3333 22.6667V17.3333H22.6667C23.0203 17.3333 23.3594 17.1929 23.6095 16.9428C23.8595 16.6928 24 16.3536 24 16C24 15.6464 23.8595 15.3072 23.6095 15.0572C23.3594 14.8071 23.0203 14.6667 22.6667 14.6667Z" />
+                                        </svg>
+                                    </label>
+                                    <input type="submit" id="send" value="">
+                                  </label>
+                            </form>                         
+                            
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- Five row -->
+            <div class="flex flex-col  md:flex-row w-full xl:gap-4">
+                <div class="card px-4 py-4 md:w-4/12 md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col ">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >Projects </h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 mb-8 overflow-scroll xl:overflow-auto">
+                            <table class="w-full text-sm text-left text-gray-400">
+                                <thead class="text-xs uppercase  text-gray-700 text--normalBold  border-b border-gray-600">
+                                    <tr>
+                                        <th scope="col" class="py-3 px-6">
+                                            Product name
+                                        </th>
+                                        <th scope="col" class="py-3 px-6">
+                                            Color
+                                        </th>
+                                        <th scope="col" class="py-3 px-6">
+                                            Category
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap text-gray-700">
+                                            Apple MacBook Pro 17"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr class="bg-white  text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="border-b text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap text-gray-700">
+                                            Apple MacBook Pro 17"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr class="bg-white  text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class=" border-b text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap text-gray-700">
+                                            Apple MacBook Pro 17"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                      
+                                    </tr>
+                                    <tr class="bg-white  text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr class="  text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium  whitespace-nowrap ">
+                                            Apple MacBook Pro 18"
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            Sliver
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="bg-white  text-gray-700 text--normalLectura">
+                                        <th scope="row" class="py-6 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-700">
+                                            Microsoft Surface Pro
+                                        </th>
+                                        <td class="py-6 px-6">
+                                            White
+                                        </td>
+                                        <td class="py-6 px-6">
+                                            Laptop PC
+                                        </td>
+                                       
+                                    </tr>
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>     
+                 <!-- Charts bars -->          
+                <div class="card px-4 flex flex-col gap-6 py-4 md:w-4/12 md:px-3 md:py-4 md:h-auto xl:h-fit">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col grow">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >To Do Lists </h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 ">
+                            <div class="progress flex flex-col px-2 gap-4   xl:h-auto ">
+                                <div class="box-progress w-full flex flex-col   gap-1  pr-4   ">
+                                    <p class="p text--normalLectura text-gray-700 min-w-1/2">Illinois</p>       
+                                    <div class="flex flex-row gap-4 w-full items-center">                                                                       
+                                        <div class="w-full  rounded-full  min-w-1/5">
+                                            <div class="bg-primary-200 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width: 22%"> 22%
+                                            </div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">254</p> 
+                                    </div>                                    
+                                </div>
+                                
+                                <div class="box-progress w-full flex flex-col   gap-1  pr-4   ">
+                                    <p class="p text--normalLectura text-gray-700 min-w-1/5">Illinois</p>       
+                                    <div class="flex flex-row gap-4 w-full items-center">                                                                       
+                                        <div class="w-full  rounded-full  min-w-1/5">
+                                            <div class="bg-primary-400 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width: 77%"> 77%
+                                            </div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">600</p> 
+                                    </div>                                    
+                                </div>
+                                <div class="box-progress w-full flex flex-col   gap-1  pr-4   ">
+                                    <p class="p text--normalLectura text-gray-700 min-w-1/5">Quito</p>       
+                                    <div class="flex flex-row gap-4 w-full items-center">                                                                       
+                                        <div class="w-full  rounded-full  min-w-1/5">
+                                            <div class="bg-primary-500 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width:25%">25%
+                                            </div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">965</p> 
+                                    </div>                                    
+                                </div>
+                                <div class="box-progress w-full flex flex-col   gap-1  pr-4   ">
+                                    <p class="p text--normalLectura text-gray-700 min-w-1/5">Europa</p>       
+                                    <div class="flex flex-row gap-4 w-full items-center">                                                                       
+                                        <div class="w-full  rounded-full  min-w-1/5">
+                                            <div class="bg-primary-200 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width: 99%"> 99%
+                                            </div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">758</p> 
+                                    </div>                                    
+                                </div>
+                                <div class="box-progress w-full flex flex-col   gap-1  pr-4   ">
+                                    <p class="p text--normalLectura text-gray-700 min-w-1/5">Lima</p>       
+                                    <div class="flex flex-row gap-4 w-full items-center">                                                                       
+                                        <div class="w-full  rounded-full  min-w-1/5">
+                                            <div class="bg-secondary-600 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width: 14%"> 14%
+                                            </div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">352</p> 
+                                    </div>                                    
+                                </div>
+                                <div class="box-progress w-full flex flex-col   gap-1  pr-4   ">
+                                    <p class="p text--normalLectura text-gray-700 min-w-1/5">Washington</p>       
+                                    <div class="flex flex-row gap-4 w-full items-center">                                                                       
+                                        <div class="w-full  rounded-full  min-w-1/5">
+                                            <div class="bg-secondary-300 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width: 35%"> 35%
+                                            </div>
+                                        </div>
+                                        <p class="p text--normalLarge text-gray_solid-500 ">584</p> 
+                                    </div>                                    
+                                </div>                               
+                            </div>
+                        </div>
+                        <div class="card-footer">  
+                            
+                        </div>                        
+                    </div> 
+                    <div class="card   bg-primary-400 rounded-2xl  px-4 py-8 h-fit">
+                        <div class="card-body">
+                            <p class="mb-4 text--titulo text-white">Today’s Bookings</p>
+                            <p class="text--bigSize text-white">4006</p>
+                            <p class="text--normalBold text-white">10.00% (30 days)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification -->
+                <div class="card px-4 py-4 md:w-4/12 md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col grow">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >Notifications </h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-5 mb-8">
+                            <ul class="list__chats flex flex-col gap-5">
+                                <li class="chat flex flex-row gap-3 w-full">
+                                    <img class="object-cover w-9 h-9 rounded-full"  src="https://picsum.photos/300/300.jpg" alt="">
+                                    <div class="flex flex-col gap-1">
+                                        <h4 class="text-primary-300 text--normal">
+                                            Isabelle Becker
+                                        </h4>
+                                        <p class="text--normal text-gray-700" >
+                                            Sales dashboard have been created
+                                        </p>
+                                        <span class="text--normal text-gray-600">
+                                            9:30 am
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="chat flex flex-row gap-3 w-full">
+                                    <img class="object-cover w-9 h-9 rounded-full"  src="https://picsum.photos/300/300.jpg" alt="">
+                                    <div class="flex flex-col gap-1">
+                                        <h4 class="text-primary-300 text--normal">
+                                            Isabelle Becker
+                                        </h4>
+                                        <p class="text--normal text-gray-700" >
+                                            Sales dashboard have been created
+                                        </p>
+                                        <span class="text--normal text-gray-600">
+                                            9:30 am
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="chat flex flex-row gap-3 w-full">
+                                    <img class="object-cover w-9 h-9 rounded-full"  src="https://picsum.photos/300/300.jpg" alt="">
+                                    <div class="flex flex-col gap-1">
+                                        <h4 class="text-primary-300 text--normal">
+                                            Isabelle Becker
+                                        </h4>
+                                        <p class="text--normal text-gray-700" >
+                                            Sales dashboard have been created
+                                        </p>
+                                        <span class="text--normal text-gray-600">
+                                            9:30 am
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="chat flex flex-row gap-3 w-full">
+                                    <img class="object-cover w-9 h-9 rounded-full"  src="https://picsum.photos/300/300.jpg" alt="">
+                                    <div class="flex flex-col gap-1">
+                                        <h4 class="text-primary-300 text--normal">
+                                            Isabelle Becker
+                                        </h4>
+                                        <p class="text--normal text-gray-700" >
+                                            Sales dashboard have been created
+                                        </p>
+                                        <span class="text--normal text-gray-600">
+                                            9:30 am
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="chat flex flex-row gap-3 w-full">
+                                    <img class="object-cover w-9 h-9 rounded-full"  src="https://picsum.photos/300/300.jpg" alt="">
+                                    <div class="flex flex-col gap-1">
+                                        <h4 class="text-primary-300 text--normal">
+                                            Isabelle Becker
+                                        </h4>
+                                        <p class="text--normal text-gray-700" >
+                                            Sales dashboard have been created
+                                        </p>
+                                        <span class="text--normal text-gray-600">
+                                            9:30 am
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">   
+                                                   
+                            
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- Six row -->
+            <div class="flex flex-col  md:flex-row w-full xl:gap-4">
+                <div class="card px-4 py-4 md:w-full md:px-3 md:py-4 md:h-auto">
+                    <div class="card bg-white rounded-2xl  p-7 flex flex-col ">
+                        <div class="card-header mb-4">
+                            <h3 class="text-gray_solid-300 text--titulo" >Projects </h3>
+                        </div>
+                        <div class="card-body flex flex-col gap-8 mb-8 overflow-scroll xl:overflow-auto">
+                            <!-- Start data table -->
+                            <table id="example"  class="display responsive nowrap" width="100%" >
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text--normalLectura text-gray-700">
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011-04-25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>63</td>
+                                        <td>2011-07-25</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>66</td>
+                                        <td>2009-01-12</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cedric Kelly</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2012-03-29</td>
+                                        <td>$433,060</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>33</td>
+                                        <td>2008-11-28</td>
+                                        <td>$162,700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brielle Williamson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2012-12-02</td>
+                                        <td>$372,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Herrod Chandler</td>
+                                        <td>Sales Assistant</td>
+                                        <td>San Francisco</td>
+                                        <td>59</td>
+                                        <td>2012-08-06</td>
+                                        <td>$137,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rhona Davidson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Tokyo</td>
+                                        <td>55</td>
+                                        <td>2010-10-14</td>
+                                        <td>$327,900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colleen Hurst</td>
+                                        <td>Javascript Developer</td>
+                                        <td>San Francisco</td>
+                                        <td>39</td>
+                                        <td>2009-09-15</td>
+                                        <td>$205,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sonya Frost</td>
+                                        <td>Software Engineer</td>
+                                        <td>Edinburgh</td>
+                                        <td>23</td>
+                                        <td>2008-12-13</td>
+                                        <td>$103,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jena Gaines</td>
+                                        <td>Office Manager</td>
+                                        <td>London</td>
+                                        <td>30</td>
+                                        <td>2008-12-19</td>
+                                        <td>$90,560</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quinn Flynn</td>
+                                        <td>Support Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2013-03-03</td>
+                                        <td>$342,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Charde Marshall</td>
+                                        <td>Regional Director</td>
+                                        <td>San Francisco</td>
+                                        <td>36</td>
+                                        <td>2008-10-16</td>
+                                        <td>$470,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Haley Kennedy</td>
+                                        <td>Senior Marketing Designer</td>
+                                        <td>London</td>
+                                        <td>43</td>
+                                        <td>2012-12-18</td>
+                                        <td>$313,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tatyana Fitzpatrick</td>
+                                        <td>Regional Director</td>
+                                        <td>London</td>
+                                        <td>19</td>
+                                        <td>2010-03-17</td>
+                                        <td>$385,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Silva</td>
+                                        <td>Marketing Designer</td>
+                                        <td>London</td>
+                                        <td>66</td>
+                                        <td>2012-11-27</td>
+                                        <td>$198,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul Byrd</td>
+                                        <td>Chief Financial Officer (CFO)</td>
+                                        <td>New York</td>
+                                        <td>64</td>
+                                        <td>2010-06-09</td>
+                                        <td>$725,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gloria Little</td>
+                                        <td>Systems Administrator</td>
+                                        <td>New York</td>
+                                        <td>59</td>
+                                        <td>2009-04-10</td>
+                                        <td>$237,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bradley Greer</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>41</td>
+                                        <td>2012-10-13</td>
+                                        <td>$132,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dai Rios</td>
+                                        <td>Personnel Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td>35</td>
+                                        <td>2012-09-26</td>
+                                        <td>$217,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenette Caldwell</td>
+                                        <td>Development Lead</td>
+                                        <td>New York</td>
+                                        <td>30</td>
+                                        <td>2011-09-03</td>
+                                        <td>$345,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yuri Berry</td>
+                                        <td>Chief Marketing Officer (CMO)</td>
+                                        <td>New York</td>
+                                        <td>40</td>
+                                        <td>2009-06-25</td>
+                                        <td>$675,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caesar Vance</td>
+                                        <td>Pre-Sales Support</td>
+                                        <td>New York</td>
+                                        <td>21</td>
+                                        <td>2011-12-12</td>
+                                        <td>$106,450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Doris Wilder</td>
+                                        <td>Sales Assistant</td>
+                                        <td>Sydney</td>
+                                        <td>23</td>
+                                        <td>2010-09-20</td>
+                                        <td>$85,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Angelica Ramos</td>
+                                        <td>Chief Executive Officer (CEO)</td>
+                                        <td>London</td>
+                                        <td>47</td>
+                                        <td>2009-10-09</td>
+                                        <td>$1,200,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Joyce</td>
+                                        <td>Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>42</td>
+                                        <td>2010-12-22</td>
+                                        <td>$92,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jennifer Chang</td>
+                                        <td>Regional Director</td>
+                                        <td>Singapore</td>
+                                        <td>28</td>
+                                        <td>2010-11-14</td>
+                                        <td>$357,650</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brenden Wagner</td>
+                                        <td>Software Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>28</td>
+                                        <td>2011-06-07</td>
+                                        <td>$206,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fiona Green</td>
+                                        <td>Chief Operating Officer (COO)</td>
+                                        <td>San Francisco</td>
+                                        <td>48</td>
+                                        <td>2010-03-11</td>
+                                        <td>$850,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shou Itou</td>
+                                        <td>Regional Marketing</td>
+                                        <td>Tokyo</td>
+                                        <td>20</td>
+                                        <td>2011-08-14</td>
+                                        <td>$163,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michelle House</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Sydney</td>
+                                        <td>37</td>
+                                        <td>2011-06-02</td>
+                                        <td>$95,400</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>Serge Baldwin</td>
+                                        <td>Data Coordinator</td>
+                                        <td>Singapore</td>
+                                        <td>64</td>
+                                        <td>2012-04-09</td>
+                                        <td>$138,575</td>
+                                    </tr>
+                                    
+                                </tbody>
+                                
+                            </table>
+                            <!-- End Data table -->
+                        </div>
+                    </div> 
+                </div>   
+            </div>
+
+            <footer class="footer">  
+            </footer>
+        </div>
+    </main>
+    <script src="resource/js/librarychart.js"></script>
+    <script src="resource/js/datatable.js" type="module"></script>
+    <script src="resource/js/Task.js"></script>  
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    
+	<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+    <script>       
+        const navigation = document.getElementById('navigation');       
+        document.getElementById('btn-menu').addEventListener('click', (e)=>{
+            navigation?.classList.toggle('active');           
+        })
+        const main = document.getElementById('main-panel');
+        document.getElementById('btn-menu-desk').addEventListener('click', (e)=>{
+            main.classList.toggle('active') 
+            //document.getElementById('wraper').classList.toggle('active');
+        })    
+    </script> 
+    <script src="resource/js/Configcharts.js"></script>
+</body>
+</html>
