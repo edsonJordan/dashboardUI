@@ -1329,7 +1329,7 @@
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../svg/check.svg');
+    background-image: url('../svg/cruz.svg');
     background-position: center center;
     background-repeat: no-repeat;
   }
@@ -1393,7 +1393,7 @@
     display: block;
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url(../svg/check.svg);
+    background-image: url("../svg/check.svg");
     background-repeat: no-repeat;
     border-radius:4px;
   }
