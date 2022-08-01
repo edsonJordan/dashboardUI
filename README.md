@@ -1,5 +1,8 @@
 
 ![Image text](https://github.com/edsonJordan/dashboardUI/raw/master/resource/images/dashboard.png)
+![Image text](https://github.com/edsonJordan/dashboardUI/raw/master/resource/images/dashboard2.png)
+![Image text](https://github.com/edsonJordan/dashboardUI/raw/master/resource/images/dashboard3.png)
+![Image text](https://github.com/edsonJordan/dashboardUI/raw/master/resource/images/dashboard4.png)
 
 Design for systems with food-related design system
 This design and code is free to be used for commercial and educational purposes.
